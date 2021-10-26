@@ -1,9 +1,10 @@
-// import InputBox from './components/InputBox/InputBox';
-
+import InputBox from './components/InputBox/InputBox';
+import React from 'react';
 function App() {
+  const [inputtext,changetextstate] = React.useState('');
   return (
     <>
-      {/* <InputBox /> */}
+      <InputBox text={changetextstate} />
     </>
   );
 }

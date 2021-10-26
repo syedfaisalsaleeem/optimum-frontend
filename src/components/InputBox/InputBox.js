@@ -1,7 +1,8 @@
-const InputBox =() =>{
+const InputBox =(props) =>{
+    console.log(props)
     return(
         <>
-         <input type="text" />
+        <input type="text" />
         </>
     )
 };
