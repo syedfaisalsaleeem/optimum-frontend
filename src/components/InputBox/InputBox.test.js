@@ -4,6 +4,6 @@ import InputBox from './InputBox.js';
 
 describe("InputBox",()=>{
     it("render input box",() => {
-        const component = shallow(<InputBox/>);
+        const inputbox = shallow(<InputBox/>);
     });
 });
