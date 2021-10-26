@@ -1,9 +1,9 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import TextBox from './TextBox.js';
 
 describe("TextBox",()=>{
     it("should render correctly",() => {
-        const component = mount(<TextBox/>);
+        const component = shallow(<TextBox/>);
     });
 });
