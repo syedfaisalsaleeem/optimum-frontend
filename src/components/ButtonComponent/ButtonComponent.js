@@ -1,7 +1,7 @@
 const ButtonComponent =() =>{
     return(
         <>
-
+            <button> Add item </button>
         </>
     )
 };
