@@ -2,7 +2,7 @@ const InputBox =(props) =>{
     console.log(props)
     return(
         <>
-         <input  type="text" onChange={e=> {}}/>
+         <input data-testid="text-input" type="text" onChange={e=> {}}/>
         </>
     )
 };
