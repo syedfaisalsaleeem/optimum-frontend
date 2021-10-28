@@ -1,7 +1,16 @@
-const ButtonComponent =() =>{
+const ButtonComponent =(props) =>{
+    console.log(props.value)
+    function add_item(){
+        console.log("-----",props.value,props.add_todo_list);
+        // console.log(props.add_todo_list)
+        const newList = props.todo_list.concat(props.value);
+ 
+        props.add_todo_list(newList);
+     
+    }
     return(
         <>
-            <button> Add item </button>
+            <button onClick={add_item}> Add item </button>
         </>
     )
 };

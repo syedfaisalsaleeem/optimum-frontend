@@ -7,7 +7,7 @@ describe("TextBox",()=>{
         const text_box = shallow(<TextBox/>);
         expect(
             text_box.contains(
-              <ul></ul>
+              <ul/>
             )
           ).toBe(true);
 

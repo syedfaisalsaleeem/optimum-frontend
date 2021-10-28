@@ -5,12 +5,13 @@ import TextBox from './components/TextBox/TextBox';
 
 function App() {
   const [inputtext,changetextstate] = React.useState('');
+  const [todolist,addtodolist] = React.useState([]);
+
   return (
     <>
-      <p> {inputtext}</p>
       <InputBox text={changetextstate} />
-      <ButtonComponent />
-      <TextBox/>
+      <ButtonComponent add_todo_list={addtodolist} value={inputtext} todo_list={todolist} />
+      <TextBox todo_list={todolist} />
     </>
   );
 }
