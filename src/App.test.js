@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, fireEvent, waitFor, screen } from '@testing-library/react';
 import App from './App';
 import "@testing-library/jest-dom/extend-expect";
 import userEvent from '@testing-library/user-event';
@@ -8,8 +8,6 @@ test('renders First screen', () => {
   const inputEl = screen.getByTestId("text-input");
   expect(inputEl).toBeInTheDocument();
   expect(inputEl).toHaveAttribute("type", "text");
-  // const linkElement = screen.getByText(/learn react/i);
-  // expect(linkElement).toBeInTheDocument();
 });
 
 test('test input field', () => {
@@ -19,4 +17,19 @@ test('test input field', () => {
   userEvent.type(inputEl, "buy some milk");
 
   expect(screen.getByTestId("text-input")).toHaveValue("buy some milk");
+});
+
+test('integration testing of button ,input field and list', () => {
+  render(<App/>);
+  const inputEl = screen.getByTestId("text-input");
+  userEvent.type(inputEl, "buy some milk");
+
+  expect(screen.getByTestId("text-input")).toHaveValue("buy some milk");
+
+  const button_test = screen.getByRole('button');
+  expect(button_test).not.toBeDisabled();
+  fireEvent.click(button_test);
+
+  const item = screen.getByText(/buy some milk/i);
+  expect(item).toBeInTheDocument();
 });
