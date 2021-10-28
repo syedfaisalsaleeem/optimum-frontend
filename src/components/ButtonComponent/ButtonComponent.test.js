@@ -4,6 +4,12 @@ import ButtonComponent from './ButtonComponent.js';
 
 describe("Button Component",()=>{
     it("render button component",() => {
-        const component = shallow(<ButtonComponent/>);
+        const button_component = shallow(<ButtonComponent/>);
+        expect(
+            button_component.containsMatchingElement(
+              <button>Add item</button>
+            )
+          ).toBe(true);
     });
+    
 });
