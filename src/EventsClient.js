@@ -7,14 +7,20 @@ class EventsClient {
 
   getEvents() {
     const headers = {"Accept": "application/json"};
-
+    // return {
+    //     todolist: 'Is it possible to export projects on this app?'
+    // };
+    var path=require('path');
+    var lib=path.join(path.dirname(require.resolve('axios')),'lib/adapters/http');
+    var http=require(lib);
     return axios({
-        url: `${this.host}/events`,
+        adapter: http,
+        url: `${this.host}/todolist`,
         method: 'GET',
         headers
       })
       .then(function (response) {
-        return response.data;
+        return response.data
       });
   }
 }
