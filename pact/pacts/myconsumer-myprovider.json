@@ -38,6 +38,27 @@
           }
         ]
       }
+    },
+    {
+      "description": "A request to create todo item",
+      "request": {
+        "method": "POST",
+        "path": "/todolist",
+        "headers": {
+          "Accept": "application/json"
+        }
+      },
+      "response": {
+        "status": 201,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": [
+          {
+            "todolist": "Is it possible to export projects on this app?"
+          }
+        ]
+      }
     }
   ],
   "metadata": {

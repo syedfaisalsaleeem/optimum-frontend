@@ -1,5 +1,5 @@
-I, [2021-10-30T23:47:56.730838 #22464]  INFO -- : Registered expected interaction GET /todolist
-D, [2021-10-30T23:47:56.730838 #22464] DEBUG -- : {
+I, [2021-10-31T00:03:45.240020 #6988]  INFO -- : Registered expected interaction GET /todolist
+D, [2021-10-31T00:03:45.240020 #6988] DEBUG -- : {
   "description": "A request for API health",
   "request": {
     "method": "GET",
@@ -17,21 +17,21 @@ D, [2021-10-30T23:47:56.730838 #22464] DEBUG -- : {
   },
   "metadata": null
 }
-I, [2021-10-30T23:47:56.760839 #22464]  INFO -- : Received request GET /todolist
-D, [2021-10-30T23:47:56.760839 #22464] DEBUG -- : {
+I, [2021-10-31T00:03:45.272019 #6988]  INFO -- : Received request GET /todolist
+D, [2021-10-31T00:03:45.272019 #6988] DEBUG -- : {
   "path": "/todolist",
   "query": "",
   "method": "get",
   "headers": {
     "Accept": "application/json",
     "User-Agent": "axios/0.24.0",
-    "Host": "127.0.0.1:57743",
+    "Host": "127.0.0.1:50408",
     "Connection": "close",
     "Version": "HTTP/1.1"
   }
 }
-I, [2021-10-30T23:47:56.761840 #22464]  INFO -- : Found matching response for GET /todolist
-D, [2021-10-30T23:47:56.761840 #22464] DEBUG -- : {
+I, [2021-10-31T00:03:45.272019 #6988]  INFO -- : Found matching response for GET /todolist
+D, [2021-10-31T00:03:45.272019 #6988] DEBUG -- : {
   "status": 200,
   "headers": {
   },
@@ -41,13 +41,72 @@ D, [2021-10-30T23:47:56.761840 #22464] DEBUG -- : {
     }
   ]
 }
-I, [2021-10-30T23:47:56.777839 #22464]  INFO -- : Verifying - interactions matched
-I, [2021-10-30T23:47:56.778836 #22464]  INFO -- : Verifying - interactions matched
-I, [2021-10-30T23:47:56.793429 #22464]  INFO -- : Cleared interactions
-I, [2021-10-30T23:47:56.794428 #22464]  INFO -- : Cleared interactions
-I, [2021-10-30T23:47:56.808429 #22464]  INFO -- : Updating pact for MyProvider at D:/ciklum/optimum-frontend/optimum-frontend/pact/pacts/myconsumer-myprovider.json
-I, [2021-10-30T23:47:56.810429 #22464]  INFO -- : *****************************************************************************
-I, [2021-10-30T23:47:56.810429 #22464]  INFO -- : Updating existing file .D:/ciklum/optimum-frontend/optimum-frontend/pact/pacts/myconsumer-myprovider.json as pactfile_write_mode is :update
-I, [2021-10-30T23:47:56.810429 #22464]  INFO -- : Only interactions defined in this test run will be updated.
-I, [2021-10-30T23:47:56.810429 #22464]  INFO -- : As interactions are identified by description and provider state, pleased note that if either of these have changed, the old interactions won't be removed from the pact file until the specs are next run with :pactfile_write_mode => :overwrite.
-I, [2021-10-30T23:47:56.810429 #22464]  INFO -- : *****************************************************************************
+I, [2021-10-31T00:03:45.366021 #6988]  INFO -- : Verifying - interactions matched
+I, [2021-10-31T00:03:45.367019 #6988]  INFO -- : Verifying - interactions matched
+I, [2021-10-31T00:03:45.381022 #6988]  INFO -- : Cleared interactions
+I, [2021-10-31T00:03:45.382021 #6988]  INFO -- : Cleared interactions
+I, [2021-10-31T00:03:45.397021 #6988]  INFO -- : Registered expected interaction POST /todolist
+D, [2021-10-31T00:03:45.397021 #6988] DEBUG -- : {
+  "description": "A request to create todo item",
+  "request": {
+    "method": "POST",
+    "path": "/todolist",
+    "headers": {
+      "Accept": "application/json"
+    }
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": [
+      {
+        "todolist": "Is it possible to export projects on this app?"
+      }
+    ]
+  },
+  "metadata": null
+}
+I, [2021-10-31T00:03:45.413025 #6988]  INFO -- : Received request POST /todolist
+D, [2021-10-31T00:03:45.413025 #6988] DEBUG -- : {
+  "path": "/todolist",
+  "query": "",
+  "method": "post",
+  "body": [
+    {
+      "todolist": "Is it possible to export projects on this app?"
+    }
+  ],
+  "headers": {
+    "Content-Length": "63",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "User-Agent": "axios/0.24.0",
+    "Host": "127.0.0.1:50408",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2021-10-31T00:03:45.413025 #6988]  INFO -- : Found matching response for POST /todolist
+D, [2021-10-31T00:03:45.414024 #6988] DEBUG -- : {
+  "status": 201,
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "body": [
+    {
+      "todolist": "Is it possible to export projects on this app?"
+    }
+  ]
+}
+I, [2021-10-31T00:03:45.429072 #6988]  INFO -- : Verifying - interactions matched
+I, [2021-10-31T00:03:45.430071 #6988]  INFO -- : Verifying - interactions matched
+I, [2021-10-31T00:03:45.445088 #6988]  INFO -- : Cleared interactions
+I, [2021-10-31T00:03:45.446086 #6988]  INFO -- : Cleared interactions
+I, [2021-10-31T00:03:45.461149 #6988]  INFO -- : Updating pact for MyProvider at D:/ciklum/optimum-frontend/optimum-frontend/pact/pacts/myconsumer-myprovider.json
+I, [2021-10-31T00:03:45.463147 #6988]  INFO -- : *****************************************************************************
+I, [2021-10-31T00:03:45.463147 #6988]  INFO -- : Updating existing file .D:/ciklum/optimum-frontend/optimum-frontend/pact/pacts/myconsumer-myprovider.json as pactfile_write_mode is :update
+I, [2021-10-31T00:03:45.463147 #6988]  INFO -- : Only interactions defined in this test run will be updated.
+I, [2021-10-31T00:03:45.463147 #6988]  INFO -- : As interactions are identified by description and provider state, pleased note that if either of these have changed, the old interactions won't be removed from the pact file until the specs are next run with :pactfile_write_mode => :overwrite.
+I, [2021-10-31T00:03:45.464147 #6988]  INFO -- : *****************************************************************************
