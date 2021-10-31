@@ -21,7 +21,7 @@ test('test input field', () => {
   expect(screen.getByTestId("text-input")).toHaveValue("buy some milk");
 });
 
-test('integration testing of button ,input field and list', () => {
+test('integration testing of button ,input field and list',async () => {
   render(<App/>);
   const inputEl = screen.getByTestId("text-input");
   userEvent.type(inputEl, "buy some milk");
@@ -32,6 +32,6 @@ test('integration testing of button ,input field and list', () => {
   expect(button_test).not.toBeDisabled();
   fireEvent.click(button_test);
 
-  const item = screen.getByText(/buy some milk/i);
-  expect(item).toBeInTheDocument();
+  await screen.findAllByText('buy some milk',{exact: false});
+
 });
