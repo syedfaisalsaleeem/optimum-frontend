@@ -1,11 +1,24 @@
-const ButtonComponent =(props) =>{
+
+const ButtonComponent = (props) =>{
     console.log(props.value)
     function add_item(){
-        console.log("-----",props.value,props.add_todo_list);
-        // console.log(props.add_todo_list)
-        const newList = props.todo_list.concat(props.value);
- 
-        props.add_todo_list(newList);
+      if (props.value.length > 1){
+        var raw = JSON.stringify({"Todolist":props.value});
+        
+        var requestOptions = {
+          method: 'POST',
+          body:raw,
+        };
+        
+        fetch("http://localhost:8010/todolist", requestOptions)
+          .then(response => response.json())
+          .then(result => {
+            console.log(result);
+            const newList = props.todo_list.concat(props.value);
+            props.add_todo_list(newList);})
+          .catch(error => console.log('error', error));
+      }
+
      
     }
     return(
