@@ -1,0 +1,112 @@
+I, [2021-10-31T20:05:19.505393 #12460]  INFO -- : Registered expected interaction GET /todolist
+D, [2021-10-31T20:05:19.505393 #12460] DEBUG -- : {
+  "description": "A request for API health",
+  "request": {
+    "method": "GET",
+    "path": "/todolist"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": [
+      {
+        "todolist": "Is it possible to export projects on this app?"
+      }
+    ]
+  },
+  "metadata": null
+}
+I, [2021-10-31T20:05:19.535389 #12460]  INFO -- : Received request GET /todolist
+D, [2021-10-31T20:05:19.536388 #12460] DEBUG -- : {
+  "path": "/todolist",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Accept": "application/json",
+    "User-Agent": "axios/0.24.0",
+    "Host": "127.0.0.1:60142",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2021-10-31T20:05:19.536388 #12460]  INFO -- : Found matching response for GET /todolist
+D, [2021-10-31T20:05:19.536388 #12460] DEBUG -- : {
+  "status": 200,
+  "headers": {
+  },
+  "body": [
+    {
+      "todolist": "Is it possible to export projects on this app?"
+    }
+  ]
+}
+I, [2021-10-31T20:05:19.565391 #12460]  INFO -- : Verifying - interactions matched
+I, [2021-10-31T20:05:19.566388 #12460]  INFO -- : Verifying - interactions matched
+I, [2021-10-31T20:05:19.580421 #12460]  INFO -- : Cleared interactions
+I, [2021-10-31T20:05:19.581418 #12460]  INFO -- : Cleared interactions
+I, [2021-10-31T20:05:19.596441 #12460]  INFO -- : Registered expected interaction POST /todolist
+D, [2021-10-31T20:05:19.597439 #12460] DEBUG -- : {
+  "description": "A request to create todo item",
+  "request": {
+    "method": "POST",
+    "path": "/todolist",
+    "headers": {
+      "Accept": "application/json"
+    }
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": [
+      {
+        "todolist": "Is it possible to export projects on this app?"
+      }
+    ]
+  },
+  "metadata": null
+}
+I, [2021-10-31T20:05:19.611490 #12460]  INFO -- : Received request POST /todolist
+D, [2021-10-31T20:05:19.611490 #12460] DEBUG -- : {
+  "path": "/todolist",
+  "query": "",
+  "method": "post",
+  "body": [
+    {
+      "todolist": "Is it possible to export projects on this app?"
+    }
+  ],
+  "headers": {
+    "Content-Length": "63",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "User-Agent": "axios/0.24.0",
+    "Host": "127.0.0.1:60142",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2021-10-31T20:05:19.612488 #12460]  INFO -- : Found matching response for POST /todolist
+D, [2021-10-31T20:05:19.612488 #12460] DEBUG -- : {
+  "status": 201,
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "body": [
+    {
+      "todolist": "Is it possible to export projects on this app?"
+    }
+  ]
+}
+I, [2021-10-31T20:05:19.627502 #12460]  INFO -- : Verifying - interactions matched
+I, [2021-10-31T20:05:19.628500 #12460]  INFO -- : Verifying - interactions matched
+I, [2021-10-31T20:05:19.643214 #12460]  INFO -- : Cleared interactions
+I, [2021-10-31T20:05:19.644211 #12460]  INFO -- : Cleared interactions
+I, [2021-10-31T20:05:19.658586 #12460]  INFO -- : Updating pact for MyProvider at D:/ciklum/optimum-frontend/optimum-frontend/pact/pacts/myconsumer-myprovider.json
+I, [2021-10-31T20:05:19.660585 #12460]  INFO -- : *****************************************************************************
+I, [2021-10-31T20:05:19.660585 #12460]  INFO -- : Updating existing file .D:/ciklum/optimum-frontend/optimum-frontend/pact/pacts/myconsumer-myprovider.json as pactfile_write_mode is :update
+I, [2021-10-31T20:05:19.660585 #12460]  INFO -- : Only interactions defined in this test run will be updated.
+I, [2021-10-31T20:05:19.660585 #12460]  INFO -- : As interactions are identified by description and provider state, pleased note that if either of these have changed, the old interactions won't be removed from the pact file until the specs are next run with :pactfile_write_mode => :overwrite.
+I, [2021-10-31T20:05:19.660585 #12460]  INFO -- : *****************************************************************************
