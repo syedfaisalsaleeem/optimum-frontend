@@ -42,6 +42,10 @@ Tests:       8 passed, 8 total
 Snapshots:   0 total
 Time:        8.598 s
 
+### End to End Testing
+Run this command for end to end testing
+`npm run cypress:all`
+
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
