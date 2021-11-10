@@ -1,8 +1,9 @@
 const MessageBox = (props) => {
+    console.log(props.message)
     return (
         <>
             <div>
-                <p></p>
+                <p> {props.message} </p>
             </div>
         </>
     );

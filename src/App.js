@@ -2,6 +2,7 @@ import InputBox from './components/InputBox/InputBox';
 import React, { useEffect } from 'react';
 import ButtonComponent from './components/ButtonComponent/ButtonComponent';
 import TextBox from './components/TextBox/TextBox';
+import MessageBox from './components/MessageBox/MessageBox';
 
 function App() {
   const [inputtext, changetextstate] = React.useState('');
@@ -23,7 +24,8 @@ function App() {
   return (
     <>
       <InputBox text={changetextstate} />
-      <ButtonComponent add_todo_list={addtodolist} value={inputtext} todo_list={todolist} />
+      <ButtonComponent add_todo_list={addtodolist} value={inputtext} todo_list={todolist} changemessage={changemessage} />
+      <MessageBox message={message} />
       <TextBox todo_list={todolist} />
     </>
   );
