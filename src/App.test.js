@@ -21,8 +21,8 @@ test('test input field', () => {
   expect(screen.getByTestId("text-input")).toHaveValue("buy some milk");
 });
 
-test('integration testing of button ,input field and list',async () => {
-  render(<App/>);
+test('integration testing of button ,input field and list', async () => {
+  render(<App />);
   const inputEl = screen.getByTestId("text-input");
   userEvent.type(inputEl, "buy some milk");
 
@@ -32,6 +32,22 @@ test('integration testing of button ,input field and list',async () => {
   expect(button_test).not.toBeDisabled();
   fireEvent.click(button_test);
 
-  await screen.findAllByText('buy some milk',{exact: false});
+  await screen.findAllByText('buy some milk', { exact: false });
 
 });
+
+test('test for empty input field', async () => {
+  render(<App />);
+  const inputEl = screen.getByTestId("text-input");
+  userEvent.type(inputEl, "");
+
+  expect(screen.getByTestId("text-input")).toHaveValue("");
+
+  const button_test = screen.getByRole('button');
+  expect(button_test).not.toBeDisabled();
+  fireEvent.click(button_test);
+
+  await screen.findAllByText('cannot add empty item', { exact: false });
+
+});
+

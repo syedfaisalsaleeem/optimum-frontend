@@ -4,21 +4,22 @@ import ButtonComponent from './components/ButtonComponent/ButtonComponent';
 import TextBox from './components/TextBox/TextBox';
 
 function App() {
-  const [inputtext,changetextstate] = React.useState('');
-  const [todolist,addtodolist] = React.useState([]);
+  const [inputtext, changetextstate] = React.useState('');
+  const [todolist, addtodolist] = React.useState([]);
+  const [message, changemessage] = React.useState('');
 
-  useEffect( ()=>{
-    fetch("http://127.0.0.1:8010/todolist")
-    .then(response => response.json())
-    .then(data => {
-      var newList = []
-      for(var i=0;i<data.length;i++){
-        newList.push(data[i].todolist)
-      }
-    addtodolist(newList);
-  });
+  useEffect(() => {
+    fetch("http://127.0.0.1:8080/todolist")
+      .then(response => response.json())
+      .then(data => {
+        var newList = []
+        for (var i = 0; i < data.length; i++) {
+          newList.push(data[i].todolist)
+        }
+        addtodolist(newList);
+      });
 
- },[]);
+  }, []);
   return (
     <>
       <InputBox text={changetextstate} />
