@@ -43,15 +43,17 @@ All the test cases are described below:
 ### Integration Tests
 - PASS  integration testing of button ,input field and list
 - PASS  test for empty input field
+- PASS  Add one item in a todo at a time 
+- PASS  Todo items should be a list
 
 ### Contract Tests
 - PASS  should get list of todo items
 - PASS  should create list of todo items
 
 Test Suites: 6 passed, 6 total
-Tests:       10 passed, 10 total
+Tests:       12 passed, 12 total
 Snapshots:   0 total
-Time:        7.989 s
+Time:        5.037 s
 Ran all test suites.
 
 ### End to End Testing

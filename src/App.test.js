@@ -62,11 +62,11 @@ test('test for api is returning the list of todos and it is showing in html', as
 });
 
 test('test for adding items and get length of list of items', async () => {
+
   render(<App />)
   await waitForElementToBeRemoved(() => screen.getByText(/Fetching todos/i));
   const get_listitem_before_click = screen.getAllByRole("listitem");
   const len_listitem_before = get_listitem_before_click.length;
-  console.log(get_listitem_before_click.length)
   const inputEl = screen.getByTestId("text-input");
   userEvent.type(inputEl, "Product");
 
