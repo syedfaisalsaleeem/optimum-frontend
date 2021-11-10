@@ -50,11 +50,11 @@ All the test cases are described below:
 - PASS  should get list of todo items
 - PASS  should create list of todo items
 
-Test Suites: 6 passed, 6 total
-Tests:       12 passed, 12 total
-Snapshots:   0 total
-Time:        5.037 s
-Ran all test suites.
+Test Suites: 6 passed, 6 total <br />
+Tests:       12 passed, 12 total <br />
+Snapshots:   0 total <br />
+Time:        5.037 s <br />
+Ran all test suites. <br />
 
 ### End to End Testing
 Run this command for end to end testing
