@@ -1,11 +1,12 @@
 
 const ButtonComponent = (props) => {
   function add_item() {
-    if (props.value.trim.length <= 1) {
+    const text = props.value.trim();
+    if (text.length <= 1) {
       props.changemessage('cannot add empty item')
     }
 
-    else if (props.value.trim.length > 1) {
+    else if (text.length > 1) {
       var raw = JSON.stringify({ "Todolist": props.value });
 
       var requestOptions = {

@@ -38,18 +38,27 @@ All the test cases are described below:
 - PASS  render button component
 - PASS  test input field
 - PASS  renders First screen
+- PASS  message box should render correctly
+
 ### Integration Tests
 - PASS  integration testing of button ,input field and list
+- PASS  test for empty input field
+
 ### Contract Tests
 - PASS  should get list of todo items
 - PASS  should create list of todo items
-Test Suites: 5 passed, 5 total
-Tests:       8 passed, 8 total
+
+Test Suites: 6 passed, 6 total
+Tests:       10 passed, 10 total
 Snapshots:   0 total
-Time:        8.598 s
+Time:        7.989 s
+Ran all test suites.
 
 ### End to End Testing
 Run this command for end to end testing
+first start the application using:
+`npm start`
+cypress testing 
 `npm run cypress:all`
 
 ### `npm run build`

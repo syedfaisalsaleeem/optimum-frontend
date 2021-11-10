@@ -7,7 +7,7 @@ import MessageBox from './components/MessageBox/MessageBox';
 function App() {
   const [inputtext, changetextstate] = React.useState('');
   const [todolist, addtodolist] = React.useState([]);
-  const [message, changemessage] = React.useState('');
+  const [message, changemessage] = React.useState('Fetching Todos');
 
   useEffect(() => {
     fetch("http://127.0.0.1:8080/todolist")
@@ -18,6 +18,7 @@ function App() {
           newList.push(data[i].todolist)
         }
         addtodolist(newList);
+        changemessage('');
       });
 
   }, []);

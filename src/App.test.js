@@ -1,9 +1,12 @@
-import { render, fireEvent, waitFor, screen } from '@testing-library/react';
+import { render, fireEvent, waitFor, screen, within, waitForElementToBeRemoved } from '@testing-library/react';
 import App from './App';
+import TextBox from "./components/TextBox/TextBox"
 import "@testing-library/jest-dom/extend-expect";
 import userEvent from '@testing-library/user-event';
-
-
+import { shallow, ShallowWrapper } from 'enzyme';
+import { act } from 'react-dom/test-utils';
+import { MemoryRouter } from 'react-router-dom';
+import { Router } from 'react-router-dom';
 
 test('renders First screen', () => {
   render(<App />);
@@ -48,6 +51,37 @@ test('test for empty input field', async () => {
   fireEvent.click(button_test);
 
   await screen.findAllByText('cannot add empty item', { exact: false });
+
+});
+
+test('test for api is returning the list of todos and it is showing in html', async () => {
+  render(<App />);
+  await waitForElementToBeRemoved(() => screen.getByText(/Fetching todos/i));
+  const get_listitem_before_click = await screen.getAllByRole("listitem");
+
+});
+
+test('test for adding items and get length of list of items', async () => {
+  render(<App />)
+  await waitForElementToBeRemoved(() => screen.getByText(/Fetching todos/i));
+  const get_listitem_before_click = screen.getAllByRole("listitem");
+  const len_listitem_before = get_listitem_before_click.length;
+  console.log(get_listitem_before_click.length)
+  const inputEl = screen.getByTestId("text-input");
+  userEvent.type(inputEl, "Product");
+
+  expect(screen.getByTestId("text-input")).toHaveValue("Product");
+
+  const button_test = screen.getByRole('button');
+  expect(button_test).not.toBeDisabled();
+  fireEvent.click(button_test);
+
+  await screen.findAllByText('Product', { exact: false });
+  render(<TextBox />);
+  const get_listitem_after_click = await screen.getAllByRole("listitem")
+  const len_listitem_after = get_listitem_after_click.length
+
+  expect(len_listitem_before + 1).toBe(len_listitem_after)
 
 });
 
