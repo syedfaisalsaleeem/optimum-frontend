@@ -58,10 +58,10 @@ Ran all test suites. <br />
 
 ### End to End Testing
 Run this command for end to end testing
-first start the application using:
-`npm start`
-cypress testing 
-`npm run cypress:all`
+first start the application using: <br />
+`npm start` <br />
+cypress testing  <br />
+`npm run cypress:all` <br />
 
 ### `npm run build`
 
