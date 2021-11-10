@@ -1,15 +1,21 @@
 # React Todo Application
 This a todo application in which we can add items in a list using button. This application is created using purely Test Driven Development. This application stores the added data
 in the backend which is communicated using rest apis.
+
 ## Getting Started
 To get started using this package follow the instructions below.
+
 ## Dependencies
 - node
+- npm
+- cypress
+
 ## Installation
 - git clone https://github.com/syedfaisalsaleeem/optimum-frontend
 - cd optimum-frontend
 - npm install
 - npm start
+
 ## Available Scripts
 
 In the project directory, you can run:

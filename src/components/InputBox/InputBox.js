@@ -1,8 +1,7 @@
-const InputBox =(props) =>{
-    console.log(props)
-    return(
+const InputBox = (props) => {
+    return (
         <>
-         <input data-testid="text-input" type="text" onChange={e=> props.text(e.target.value)}/>
+            <input data-testid="text-input" type="text" onChange={e => props.text(e.target.value)} />
         </>
     )
 };
