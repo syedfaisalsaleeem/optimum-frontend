@@ -68,6 +68,10 @@ cypress testing
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
+## Running Rest Api through Docker
+The react todo application is dockerized and they can be run through these commands:
+- `docker-compose -f docker-compose.dev.yml up -d --build`
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 

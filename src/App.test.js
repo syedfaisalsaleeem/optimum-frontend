@@ -1,12 +1,9 @@
-import { render, fireEvent, waitFor, screen, within, waitForElementToBeRemoved } from '@testing-library/react';
+import { render, fireEvent, screen, waitForElementToBeRemoved } from '@testing-library/react';
 import App from './App';
 import TextBox from "./components/TextBox/TextBox"
 import "@testing-library/jest-dom/extend-expect";
 import userEvent from '@testing-library/user-event';
-import { shallow, ShallowWrapper } from 'enzyme';
-import { act } from 'react-dom/test-utils';
-import { MemoryRouter } from 'react-router-dom';
-import { Router } from 'react-router-dom';
+
 
 test('renders First screen', () => {
   render(<App />);
